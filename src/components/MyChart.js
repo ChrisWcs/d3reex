@@ -1,9 +1,11 @@
 import React from 'react';
-import { LineChart, Line } from 'recharts';
+import { LineChart, Line, XAxis, YAxis } from 'recharts';
 
 const MyChart = ({data}) => (
-    <LineChart width={400} height={400} data={data}>
-        <Line type="monotone" dataKey="amt" stroke="#2962FF" />
+    <LineChart width={400} height={400} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+        <XAxis dataKey="name"/>
+       <YAxis/>
+       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
     </LineChart>
 );
 
